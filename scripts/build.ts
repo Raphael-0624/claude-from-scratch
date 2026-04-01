@@ -85,9 +85,13 @@ async function parseMarkdown(filePath: string) {
     }
   }
 
+  // Remove first H1 if it matches the title (prevent duplicate titles)
+  const titleRegex = new RegExp(`^#\\s*${meta.title?.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(\\s*\\{[^}]*\\})?\\s*\\n`, 'm');
+  const cleanBody = bodyContent.replace(titleRegex, '');
+
   return {
     meta,
-    content: md.render(bodyContent)
+    content: md.render(cleanBody)
   };
 }
 
@@ -95,11 +99,12 @@ async function buildNavigation(): Promise<Navigation> {
   const parts: Part[] = [];
   const chapters: Chapter[] = [];
 
-  const partDirs = ['part1', 'part2', 'part3'];
+  const partDirs = ['part1', 'part2', 'part3', 'scenarios'];
   const partTitles: Record<string, string> = {
     part1: '基础篇',
     part2: '核心篇',
-    part3: '高级篇'
+    part3: '高级篇',
+    scenarios: '实战场景'
   };
 
   for (let i = 0; i < partDirs.length; i++) {
@@ -222,6 +227,18 @@ async function build() {
     'base.ejs',
     navigation
   );
+
+  // Build part index pages
+  console.log('📂 Building part index pages...');
+  for (const part of navigation.parts) {
+    const indexPath = path.join(CONTENT_DIR, part.id, 'index.md');
+    const outputPath = path.join(DIST_DIR, part.id, 'index.html');
+    try {
+      await buildPage(indexPath, outputPath, 'base.ejs', navigation);
+    } catch (e) {
+      console.log(`  ⚠️  Skipping ${part.id}/index.html`);
+    }
+  }
 
   // Build chapters
   console.log('📚 Building chapters...');

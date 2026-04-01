@@ -61,12 +61,100 @@
       "id": "part2",
       "title": "核心篇",
       "order": 2,
-      "chapters": []
+      "chapters": [
+        {
+          "id": "ch6-tool-system",
+          "title": "Ch6: 工具系统",
+          "subtitle": "构建可扩展的工具框架，实现类型安全的工具定义与注册",
+          "part": "part2",
+          "partTitle": "核心篇",
+          "order": 6,
+          "file": "ch6-tool-system.md",
+          "path": "part2/ch6-tool-system.html"
+        },
+        {
+          "id": "ch7-permissions",
+          "title": "Ch7: 权限管理",
+          "subtitle": "构建多层安全体系，实现 hooks、rules 和 dialogs 三级权限控制",
+          "part": "part2",
+          "partTitle": "核心篇",
+          "order": 7,
+          "file": "ch7-permissions.md",
+          "path": "part2/ch7-permissions.html"
+        },
+        {
+          "id": "ch8-agent-system",
+          "title": "Ch8: Agent 系统",
+          "subtitle": "实现多 Agent 并行执行、Fork/Resume 模式和任务协调",
+          "part": "part2",
+          "partTitle": "核心篇",
+          "order": 8,
+          "file": "ch8-agent-system.md",
+          "path": "part2/ch8-agent-system.html"
+        },
+        {
+          "id": "ch9-configuration",
+          "title": "Ch9: 配置与持久化",
+          "subtitle": "构建企业级分层配置系统，支持 Enterprise → User 级联覆盖",
+          "part": "part2",
+          "partTitle": "核心篇",
+          "order": 9,
+          "file": "ch9-configuration.md",
+          "path": "part2/ch9-configuration.html"
+        },
+        {
+          "id": "ch10-message-stream",
+          "title": "Ch10: 消息流与 UI",
+          "subtitle": "实现流式消息渲染、进度反馈和流畅的用户交互体验",
+          "part": "part2",
+          "partTitle": "核心篇",
+          "order": 10,
+          "file": "ch10-message-stream.md",
+          "path": "part2/ch10-message-stream.html"
+        }
+      ]
     },
     {
       "id": "part3",
       "title": "高级篇",
       "order": 3,
+      "chapters": [
+        {
+          "id": "ch11-performance",
+          "title": "Ch11: 性能优化",
+          "subtitle": "智能缓存策略、Token 优化和流式处理，降低 API 成本",
+          "part": "part3",
+          "partTitle": "高级篇",
+          "order": 11,
+          "file": "ch11-performance.md",
+          "path": "part3/ch11-performance.html"
+        },
+        {
+          "id": "ch12-mcp-protocol",
+          "title": "Ch12: MCP 协议",
+          "subtitle": "Model Context Protocol 实现，连接外部系统和数据",
+          "part": "part3",
+          "partTitle": "高级篇",
+          "order": 12,
+          "file": "ch12-mcp-protocol.md",
+          "path": "part3/ch12-mcp-protocol.html"
+        },
+        {
+          "id": "ch13-enterprise-deployment",
+          "title": "Ch13: 企业部署",
+          "subtitle": "私有化部署、运维监控和安全加固，生产环境完整方案",
+          "part": "part3",
+          "partTitle": "高级篇",
+          "order": 13,
+          "file": "ch13-enterprise-deployment.md",
+          "path": "part3/ch13-enterprise-deployment.html"
+        }
+      ]
+    },
+    {
+      "id": "scenarios",
+      "title": "实战场景",
+      "order": 4,
       "chapters": []
     }
   ],
@@ -120,6 +208,86 @@
       "order": 5,
       "file": "ch5-code-editing.md",
       "path": "part1/ch5-code-editing.html"
+    },
+    {
+      "id": "ch10-message-stream",
+      "title": "Ch10: 消息流与 UI",
+      "subtitle": "实现流式消息渲染、进度反馈和流畅的用户交互体验",
+      "part": "part2",
+      "partTitle": "核心篇",
+      "order": 10,
+      "file": "ch10-message-stream.md",
+      "path": "part2/ch10-message-stream.html"
+    },
+    {
+      "id": "ch6-tool-system",
+      "title": "Ch6: 工具系统",
+      "subtitle": "构建可扩展的工具框架，实现类型安全的工具定义与注册",
+      "part": "part2",
+      "partTitle": "核心篇",
+      "order": 6,
+      "file": "ch6-tool-system.md",
+      "path": "part2/ch6-tool-system.html"
+    },
+    {
+      "id": "ch7-permissions",
+      "title": "Ch7: 权限管理",
+      "subtitle": "构建多层安全体系，实现 hooks、rules 和 dialogs 三级权限控制",
+      "part": "part2",
+      "partTitle": "核心篇",
+      "order": 7,
+      "file": "ch7-permissions.md",
+      "path": "part2/ch7-permissions.html"
+    },
+    {
+      "id": "ch8-agent-system",
+      "title": "Ch8: Agent 系统",
+      "subtitle": "实现多 Agent 并行执行、Fork/Resume 模式和任务协调",
+      "part": "part2",
+      "partTitle": "核心篇",
+      "order": 8,
+      "file": "ch8-agent-system.md",
+      "path": "part2/ch8-agent-system.html"
+    },
+    {
+      "id": "ch9-configuration",
+      "title": "Ch9: 配置与持久化",
+      "subtitle": "构建企业级分层配置系统，支持 Enterprise → User 级联覆盖",
+      "part": "part2",
+      "partTitle": "核心篇",
+      "order": 9,
+      "file": "ch9-configuration.md",
+      "path": "part2/ch9-configuration.html"
+    },
+    {
+      "id": "ch11-performance",
+      "title": "Ch11: 性能优化",
+      "subtitle": "智能缓存策略、Token 优化和流式处理，降低 API 成本",
+      "part": "part3",
+      "partTitle": "高级篇",
+      "order": 11,
+      "file": "ch11-performance.md",
+      "path": "part3/ch11-performance.html"
+    },
+    {
+      "id": "ch12-mcp-protocol",
+      "title": "Ch12: MCP 协议",
+      "subtitle": "Model Context Protocol 实现，连接外部系统和数据",
+      "part": "part3",
+      "partTitle": "高级篇",
+      "order": 12,
+      "file": "ch12-mcp-protocol.md",
+      "path": "part3/ch12-mcp-protocol.html"
+    },
+    {
+      "id": "ch13-enterprise-deployment",
+      "title": "Ch13: 企业部署",
+      "subtitle": "私有化部署、运维监控和安全加固，生产环境完整方案",
+      "part": "part3",
+      "partTitle": "高级篇",
+      "order": 13,
+      "file": "ch13-enterprise-deployment.md",
+      "path": "part3/ch13-enterprise-deployment.html"
     }
   ]
 }
