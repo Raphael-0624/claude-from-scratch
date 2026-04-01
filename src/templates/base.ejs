@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Claude From Scratch</title>
+    <meta name="description" content="<%= description %>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/variables.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/main.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/components.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/syntax.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/responsive.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <%- include('partials/nav') %>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <%- content %>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    <script src="/claude_from_scratch/static/js/main.js"></script>
+    <script src="/claude_from_scratch/static/js/progress.js"></script>
+</body>
+</html>

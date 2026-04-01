@@ -1,0 +1,19 @@
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+        <% navigation.parts.forEach(part => { %>
+        <div class="sidebar-section">
+            <h3 class="sidebar-title"><%= part.title %></h3>
+            <ul class="sidebar-list">
+                <% part.chapters.forEach(ch => { %>
+                <li class="<%= current && current.id === ch.id ? 'active' : '' %>">
+                    <a href="/claude_from_scratch/<%= ch.path %>">
+                        <span class="chapter-num"><%= String(ch.order).padStart(2, '0') %></span>
+                        <span class="chapter-title"><%= ch.title %></span>
+                    </a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+        <% }) %>
+    </div>
+</aside>

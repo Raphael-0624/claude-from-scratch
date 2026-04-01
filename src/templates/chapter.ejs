@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | <%= current?.partTitle || 'Claude From Scratch' %></title>
+    <meta name="description" content="<%= description %>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/variables.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/main.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/components.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/syntax.css">
+    <link rel="stylesheet" href="/claude_from_scratch/static/css/responsive.css">
+</head>
+<body class="has-sidebar">
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <%- include('partials/nav') %>
+
+    <!-- Sidebar -->
+    <%- include('partials/sidebar') %>
+
+    <!-- Main Content -->
+    <main class="main-content with-sidebar">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="/claude_from_scratch/">首页</a>
+                <span class="separator">/</span>
+                <% if (current) { %>
+                <a href="/claude_from_scratch/<%= current.part %>/index.html"><%= current.partTitle %></a>
+                <span class="separator">/</span>
+                <span class="current"><%= title %></span>
+                <% } %>
+            </nav>
+
+            <!-- Chapter Header -->
+            <header class="chapter-header">
+                <% if (current) { %>
+                <div class="chapter-number"><%= String(current.order).padStart(2, '0') %></div>
+                <% } %>
+                <h1><%= title %></h1>
+                <% if (description) { %>
+                <p class="chapter-description"><%= description %></p>
+                <% } %>
+            </header>
+
+            <!-- Chapter Content -->
+            <article class="chapter-content">
+                <%- content %>
+            </article>
+
+            <!-- Chapter Navigation -->
+            <nav class="chapter-nav">
+                <% if (prev) { %>
+                <a href="/claude_from_scratch/<%= prev.path %>" class="prev">
+                    <span class="label">← 上一章</span>
+                    <span class="title"><%= prev.title %></span>
+                </a>
+                <% } else { %>
+                <div></div>
+                <% } %>
+
+                <% if (next) { %>
+                <a href="/claude_from_scratch/<%= next.path %>" class="next">
+                    <span class="label">下一章 →</span>
+                    <span class="title"><%= next.title %></span>
+                </a>
+                <% } else { %>
+                <div></div>
+                <% } %>
+            </nav>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+    <!-- Scripts -->
+    <script src="/claude_from_scratch/static/js/main.js"></script>
+    <script src="/claude_from_scratch/static/js/progress.js"></script>
+    <script src="/claude_from_scratch/static/js/nav.js"></script>
+</body>
+</html>
