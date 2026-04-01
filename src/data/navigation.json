@@ -1,0 +1,125 @@
+{
+  "parts": [
+    {
+      "id": "part1",
+      "title": "基础篇",
+      "order": 1,
+      "chapters": [
+        {
+          "id": "ch1-cli-skeleton",
+          "title": "Ch1: 搭建骨架",
+          "subtitle": "创建 CLI 框架、配置系统，完成第一次运行",
+          "part": "part1",
+          "partTitle": "基础篇",
+          "order": 1,
+          "file": "ch1-cli-skeleton.md",
+          "path": "part1/ch1-cli-skeleton.html"
+        },
+        {
+          "id": "ch2-llm-connection",
+          "title": "Ch2: 连接大脑",
+          "subtitle": "接入 LLM API，实现流式对话",
+          "part": "part1",
+          "partTitle": "基础篇",
+          "order": 2,
+          "file": "ch2-llm-connection.md",
+          "path": "part1/ch2-llm-connection.html"
+        },
+        {
+          "id": "ch3-file-operations",
+          "title": "Ch3: 读取世界",
+          "subtitle": "实现文件系统操作，让 AI 能读取项目文件",
+          "part": "part1",
+          "partTitle": "基础篇",
+          "order": 3,
+          "file": "ch3-file-operations.md",
+          "path": "part1/ch3-file-operations.html"
+        },
+        {
+          "id": "ch4-bash-execution",
+          "title": "Ch4: 执行命令",
+          "subtitle": "实现 Bash 命令执行与安全验证",
+          "part": "part1",
+          "partTitle": "基础篇",
+          "order": 4,
+          "file": "ch4-bash-execution.md",
+          "path": "part1/ch4-bash-execution.html"
+        },
+        {
+          "id": "ch5-code-editing",
+          "title": "Ch5: 编辑代码",
+          "subtitle": "实现文件编辑能力，完成 MVP",
+          "part": "part1",
+          "partTitle": "基础篇",
+          "order": 5,
+          "file": "ch5-code-editing.md",
+          "path": "part1/ch5-code-editing.html"
+        }
+      ]
+    },
+    {
+      "id": "part2",
+      "title": "核心篇",
+      "order": 2,
+      "chapters": []
+    },
+    {
+      "id": "part3",
+      "title": "高级篇",
+      "order": 3,
+      "chapters": []
+    }
+  ],
+  "chapters": [
+    {
+      "id": "ch1-cli-skeleton",
+      "title": "Ch1: 搭建骨架",
+      "subtitle": "创建 CLI 框架、配置系统，完成第一次运行",
+      "part": "part1",
+      "partTitle": "基础篇",
+      "order": 1,
+      "file": "ch1-cli-skeleton.md",
+      "path": "part1/ch1-cli-skeleton.html"
+    },
+    {
+      "id": "ch2-llm-connection",
+      "title": "Ch2: 连接大脑",
+      "subtitle": "接入 LLM API，实现流式对话",
+      "part": "part1",
+      "partTitle": "基础篇",
+      "order": 2,
+      "file": "ch2-llm-connection.md",
+      "path": "part1/ch2-llm-connection.html"
+    },
+    {
+      "id": "ch3-file-operations",
+      "title": "Ch3: 读取世界",
+      "subtitle": "实现文件系统操作，让 AI 能读取项目文件",
+      "part": "part1",
+      "partTitle": "基础篇",
+      "order": 3,
+      "file": "ch3-file-operations.md",
+      "path": "part1/ch3-file-operations.html"
+    },
+    {
+      "id": "ch4-bash-execution",
+      "title": "Ch4: 执行命令",
+      "subtitle": "实现 Bash 命令执行与安全验证",
+      "part": "part1",
+      "partTitle": "基础篇",
+      "order": 4,
+      "file": "ch4-bash-execution.md",
+      "path": "part1/ch4-bash-execution.html"
+    },
+    {
+      "id": "ch5-code-editing",
+      "title": "Ch5: 编辑代码",
+      "subtitle": "实现文件编辑能力，完成 MVP",
+      "part": "part1",
+      "partTitle": "基础篇",
+      "order": 5,
+      "file": "ch5-code-editing.md",
+      "path": "part1/ch5-code-editing.html"
+    }
+  ]
+}

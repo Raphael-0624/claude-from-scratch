@@ -165,8 +165,7 @@ async function buildPage(
   };
 
   const templatePath = path.join(SRC_DIR, 'templates', template);
-  const templateContent = await fs.readFile(templatePath, 'utf-8');
-  const html = ejs.render(templateContent, pageData);
+  const html = await ejs.renderFile(templatePath, pageData);
 
   await ensureDir(path.dirname(outputPath));
   await fs.writeFile(outputPath, html);
